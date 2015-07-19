@@ -1,1 +1,1 @@
-cpack --version 1.2.3 --force
+cpack --version 0.0.1 --force
