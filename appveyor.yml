@@ -29,10 +29,10 @@ nuget:
   account_feed: true
   project_feed: true
 before_build:
-- nuget restore TidyJson\TidyJson\TidyJson.sln
+- nuget restore TidyJson\TidyJson.sln
 
 build:
-  project: TidyJson\TidyJson\TidyJson.sln
+  project: TidyJson\TidyJson.sln
   publish_nuget: true
   publish_nuget_symbols: true
   verbosity: minimal
