@@ -1,0 +1,1 @@
+cuninst -y TidyJson.portable
