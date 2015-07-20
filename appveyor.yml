@@ -38,11 +38,13 @@ build:
   verbosity: minimal
 
 after_build:
-  - cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version %BuildVersion%
-  - appveyor PushArtifact *.nupkg -FileName package
+- cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version %BuildVersion%
+#- appveyor PushArtifact *.nupkg -FileName package2
 artifacts:
 - path: TidyJson\TidyJson\bin\$(configuration)
   name: bin
+- path: '*.nupkg'
+  name: package
 deploy:
 - provider: GitHub
   auth_token:
