@@ -4,7 +4,7 @@ version: 1.0.{build}
 skip_tags: false
 configuration: Release
 init:
-- ps: >-
+  - ps: >-
     $parsedReleaseBuildVersion = $env:APPVEYOR_REPO_TAG_NAME -Match "(\d+.\d+.\d+(.\d+)?)"
     
     If($env:appveyor_repo_tag -AND $parsedReleaseBuildVersion) {
@@ -36,6 +36,13 @@ build:
   publish_nuget: true
   publish_nuget_symbols: true
   verbosity: minimal
+after_build:
+  on:
+    branch: master
+    IsGithubRelease: true
+  - ps: >-
+    cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version $env:BuildVersion
+    Push-AppveyorArtifact *.nupkg -FileName "package"
 artifacts:
 - path: TidyJson\TidyJson\bin\$(configuration)
   name: bin
@@ -52,7 +59,7 @@ deploy:
   server: https://chocolatey.org/
   api_key:
     secure: 2Uqi8iUyKSHUakCSDeJb+qeXjn8i87F2U9RRmQIsqz4HOSycTjhat5AxHNs0yJ4g
-  artifact: bin
+  artifact: package
   on:
     branch: master
     IsGithubRelease: true
