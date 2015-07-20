@@ -39,6 +39,7 @@ build:
 
 after_build:
   - cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version %BuildVersion%
+  - appveyor PushArtifact *.nupkg -FileName package
 artifacts:
 - path: TidyJson\TidyJson\bin\$(configuration)
   name: bin
