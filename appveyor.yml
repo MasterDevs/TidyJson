@@ -38,7 +38,7 @@ build:
   verbosity: minimal
 
 after_build:
-	cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version %BuildVersion%
+  - cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version %BuildVersion%
 artifacts:
 - path: TidyJson\TidyJson\bin\$(configuration)
   name: bin
