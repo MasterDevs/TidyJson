@@ -48,3 +48,9 @@ deploy:
   on:
     branch: master
     IsGithubRelease: true
+- provider: script
+  prerelease: false
+  ps: Write-Host "testing deployment script"
+  on:
+    branch: master
+    #IsGithubRelease: true
