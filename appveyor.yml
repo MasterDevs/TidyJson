@@ -40,7 +40,7 @@ after_build:
   on:
     branch: master
     IsGithubRelease: true
-  - ps: >-
+  ps: >-
     cpack TidyJson\TidyJson\Chocolatey\package.nuspec --version $env:BuildVersion
     Push-AppveyorArtifact *.nupkg -FileName "package"
 artifacts:
