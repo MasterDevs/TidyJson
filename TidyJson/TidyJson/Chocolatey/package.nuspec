@@ -5,8 +5,8 @@
     <id>TidyJson.portable</id>
     <title>TidyJson (Portable)</title>
     <version>0.0.1</version>
-    <authors>Josh</authors>
-    <owners>Josh</owners>
+    <authors>MasterDevs</authors>
+    <owners>MasterDevs</owners>
     <summary>JSON pretty printer</summary>
     <description>JSON pretty printer</description>
     <tags>json prettyprint</tags>
