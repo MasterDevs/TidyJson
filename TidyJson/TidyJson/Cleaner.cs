@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TidyJson
 {
@@ -23,7 +17,6 @@ namespace TidyJson
 
             var cleanJson = CleanJson(dirtyJson);
             Write(cleanJson);
-
         }
 
         private string CleanJson(string dirtyJson)
@@ -35,8 +28,7 @@ namespace TidyJson
 
         private string Read()
         {
-            using (var stream = Console.OpenStandardInput())
-            using (var reader = new StreamReader(stream))
+            using (var reader = _stramFactory.InputReader)
             {
                 return reader.ReadToEnd();
             }
@@ -44,8 +36,7 @@ namespace TidyJson
 
         private void Write(string output)
         {
-            using (var stream = _stramFactory.GetOutputStream())
-            using (var writer = new StreamWriter(stream))
+            using (var writer = _stramFactory.OutputWriter)
             {
                 writer.Write(output);
             }
