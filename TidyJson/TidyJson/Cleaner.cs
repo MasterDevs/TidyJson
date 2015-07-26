@@ -10,11 +10,11 @@ namespace TidyJson
 {
     public class Cleaner
     {
-        private Options _options;
+        private StreamFactory _stramFactory;
 
-        public Cleaner(Options options)
+        public Cleaner(StreamFactory streamFactory)
         {
-            _options = options;
+            _stramFactory = streamFactory;
         }
 
         public void Clean()
@@ -44,7 +44,11 @@ namespace TidyJson
 
         private void Write(string output)
         {
-            Console.WriteLine(output);
+            using (var stream = _stramFactory.GetOutputStream())
+            using (var writer = new StreamWriter(stream))
+            {
+                writer.Write(output);
+            }
         }
     }
 }
