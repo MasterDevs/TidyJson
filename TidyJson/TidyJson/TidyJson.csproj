@@ -41,8 +41,8 @@
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MasterDevs.Clippy, Version=0.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MasterDevs.Clippy.0.0.5.0\lib\net452\MasterDevs.Clippy.dll</HintPath>
+    <Reference Include="MasterDevs.Clippy, Version=0.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MasterDevs.Clippy.0.0.6.0\lib\net452\MasterDevs.Clippy.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

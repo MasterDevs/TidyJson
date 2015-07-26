@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clippy;
+using System;
 using System.IO;
 
 namespace TidyJson
@@ -24,7 +25,7 @@ namespace TidyJson
         {
             if (_options.Clipboard)
             {
-                return new Clippy.ClipboardReader();
+                return new ClipboardReader();
             }
 
             return new StreamReader(Console.OpenStandardInput());
@@ -32,6 +33,10 @@ namespace TidyJson
 
         private TextWriter GetOutputWriter()
         {
+            if (_options.Clipboard)
+            {
+                return new ClipboardWriter();
+            }
             if (null != _options.OutputFile)
             {
                 return new StreamWriter(_options.OutputFile, false);
