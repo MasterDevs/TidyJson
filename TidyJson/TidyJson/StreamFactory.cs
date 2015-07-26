@@ -27,6 +27,10 @@ namespace TidyJson
             {
                 return new ClipboardReader();
             }
+            if (null != _options.InputFile)
+            {
+                return new StreamReader(_options.InputFile);
+            }
 
             return new StreamReader(Console.OpenStandardInput());
         }
