@@ -9,7 +9,7 @@ namespace TidyJson
             "clipboard",
             Required = false,
             MutuallyExclusiveSet = "input",
-            HelpText = "Read input from the clipboard and write output back out to the clipboard")]
+            HelpText = "Read JSON from clipboard and write it back to the clipboard")]
         public bool Clipboard { get; set; }
 
         [Option('i',
@@ -30,8 +30,35 @@ namespace TidyJson
 
         public string GetUsage()
         {
-            return HelpText.AutoBuild(this,
-              (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
+            var help = new HelpText
+            {
+                Copyright = new CopyrightInfo("MasterDevs", 2015),
+                AdditionalNewLineAfterOption = false,
+                AddDashesToOption = true,
+            };
+            help.AddPreOptionsLine("Usage: tidyJson [OPTIONS]");
+            help.AddPreOptionsLine("Uses standard in and standard out if input or output not supplied");
+            help.AddPostOptionsLine("Examples:");
+            help.AddPostOptionsLine("    echo {json:'value'} | tidyJson");
+            help.AddPostOptionsLine("        Read JSON from standard input and write it to standard output");
+            help.AddPostOptionsLine(string.Empty);
+            help.AddPostOptionsLine("    tidyJson -c");
+            help.AddPostOptionsLine("        Read JSON from clipboard and write it back to the clipboard");
+            help.AddPostOptionsLine(string.Empty);
+            help.AddPostOptionsLine("    tidyJson -f myOutput.json");
+            help.AddPostOptionsLine("        Read JSON from standard input and write it to the file myOutput.json");
+            help.AddPostOptionsLine(string.Empty);
+            help.AddPostOptionsLine("    tidyJson -i myInput.json");
+            help.AddPostOptionsLine("        Read JSON from the file myInput.Json and write it to standard output");
+            help.AddPostOptionsLine(string.Empty);
+            help.AddPostOptionsLine("    tidyJson -i myInput.json -f myOutput.json");
+            help.AddPostOptionsLine("        Read JSON from the file myInput.Json and write it to the file myOutput.json");
+
+            help.AddOptions(this);
+            return help;
+
+            //return HelpText.AutoBuild(this,
+            //  (HelpText current) => HelpText.DefaultParsingErrorsHandler(this, current));
         }
     }
 }
