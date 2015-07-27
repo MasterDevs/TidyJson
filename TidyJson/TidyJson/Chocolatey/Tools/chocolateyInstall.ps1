@@ -1,5 +1,5 @@
 ﻿$packageName = 'TidyJson.portable' # arbitrary name for the package, used in messages
-$url ="https://github.com/MasterDevs/TidyJson/releases/download/v0.0.1/bin.zip"
+$url ="https://github.com/MasterDevs/TidyJson/releases/download/v1.0.1/bin.zip"
 
 try 
 {
