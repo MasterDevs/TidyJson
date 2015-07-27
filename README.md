@@ -33,10 +33,18 @@ TidyJson can be installed with [Chocolatey](https://chocolatey.org/)
         tidyJson -i myInput.json -f myOutput.json
             Read JSON from the file myInput.Json and write it to the file myOutput.json
 
+# Using from Vim
+I originally wrote this so I could quickly format JSON within Vim.
+To map TidyJson make sure it is in your path and add the following to your .vimrc:
+
+    nmap <F-12> :1,$ ! TidyJson -<cr>:set syntax=javascript<cr>
+
+Now when you press the F-12 key, it will format the JSON in the current buffer.
+
 # Credits
 
-TidyJson uses 
+TidyJson uses the following projects:
 
-* MasterDev's [ChocolateyCoolWhip](https://github.com/MasterDevs/ChocolateyCoolWhip) to build and deploy to Chocolatey
+* [MasterDevs.ChocolateyCoolWhip](https://github.com/MasterDevs/ChocolateyCoolWhip) to build and deploy to Chocolatey
 * [MasterDevs.Clippy](https://github.com/MasterDevs/Clippy) to read and write to the clipbord
 * [Json.Net](http://www.newtonsoft.com/json) to format JSON
