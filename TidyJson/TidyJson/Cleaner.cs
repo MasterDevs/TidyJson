@@ -1,3 +1,5 @@
+Purposefully trying to break my build in appveyor to see what happens in the pull request
+
 ﻿using Newtonsoft.Json.Linq;
 
 namespace TidyJson
