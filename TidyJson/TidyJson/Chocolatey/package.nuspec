@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if �O� doesn�t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>TidyJson.portable</id>
+    <id>__PACKAGE_NAME__</id>
     <title>TidyJson (Portable)</title>
-    <version>0.0.1</version>
+    <version>__VERSION__</version>
     <authors>MasterDevs</authors>
     <owners>MasterDevs</owners>
     <summary>JSON pretty printer</summary>
@@ -13,8 +13,8 @@
     <copyright></copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes></releaseNotes>
-    <licenseUrl> https://github.com/MasterDevs/TidyJson/blob/master/LICENSE </licenseUrl>
-    <projectUrl> https://github.com/MasterDevs/TidyJson </projectUrl>
+    <licenseUrl> __PROJECT_BASE_URL__/blob/master/LICENSE </licenseUrl>
+    <projectUrl> __PROJECT_BASE_URL__ </projectUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
