@@ -1,5 +1,5 @@
 ﻿$versionToken = "__VERSION__";
-$version = $env:BuildVersion
+$version = $env:APPVEYOR_REPO_TAG_NAME
 echo "Starting prepackage of version $version";
 
 $json = @"
