@@ -11,9 +11,13 @@
     <tags>json prettyprint</tags>
     <copyright></copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes></releaseNotes>
-    <licenseUrl> https://github.com/MasterDevs/TidyJson/blob/master/LICENSE </licenseUrl>
-    <projectUrl> https://github.com/MasterDevs/TidyJson </projectUrl>
+    <projectUrl>       https://github.com/MasterDevs/TidyJson                     </projectUrl>
+    <packageSourceUrl> https://github.com/MasterDevs/TidyJson                     </packageSourceUrl>
+    <docsUrl>          https://github.com/MasterDevs/TidyJson                     </docsUrl>
+    <projectSourceUrl> https://github.com/MasterDevs/TidyJson                     </projectSourceUrl>
+    <bugTrackerUrl>    https://github.com/MasterDevs/TidyJson/issues              </bugTrackerUrl>
+    <releaseNotes>     https://github.com/MasterDevs/TidyJson/releases            </releaseNotes>
+    <licenseUrl>       https://github.com/MasterDevs/TidyJson/blob/master/LICENSE </licenseUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
