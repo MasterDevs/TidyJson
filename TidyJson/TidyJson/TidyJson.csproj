@@ -73,6 +73,7 @@
     <None Include="Chocolatey\PrePackage.ps1" />
     <None Include="Chocolatey\ToolsTemplates\chocolateyInstall.ps1" />
     <None Include="Chocolatey\ToolsTemplates\chocolateyUninstall.ps1" />
+    <None Include="Chocolatey\ToolsTemplates\Tokens.json" />
     <None Include="Chocolatey\uninstall.bat" />
     <None Include="packages.config" />
   </ItemGroup>
