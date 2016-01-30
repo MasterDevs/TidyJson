@@ -71,8 +71,8 @@
     <None Include="Chocolatey\pack.bat" />
     <None Include="Chocolatey\package.nuspec" />
     <None Include="Chocolatey\PrePackage.ps1" />
-    <None Include="Chocolatey\Tools\chocolateyInstall.ps1" />
-    <None Include="Chocolatey\Tools\chocolateyUninstall.ps1" />
+    <None Include="Chocolatey\ToolsTemplates\chocolateyInstall.ps1" />
+    <None Include="Chocolatey\ToolsTemplates\chocolateyUninstall.ps1" />
     <None Include="Chocolatey\uninstall.bat" />
     <None Include="packages.config" />
   </ItemGroup>

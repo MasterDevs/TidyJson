@@ -1,6 +1,6 @@
 ﻿$versionToken = "__VERSION__";
 $version = $env:APPVEYOR_REPO_TAG_NAME
-echo "Starting prepackage of version $version";
+Write-Host "Starting prepackage of version $version";
 
 $json = @"
   [
@@ -11,20 +11,31 @@ $json = @"
 
 $tokens = ConvertFrom-Json $json
 
-$files = Get-ChildItem -r -include "chocolatey*.ps1";
+$templateDirectory = Get-ChildItem -Recurse -Depth 10 -Directory -Include ToolsTemplates
 
-foreach($file in $files)
+$toolsDir = "$($templateDirectory.Parent.FullName)\Tools"
+write-host "Creating $toolsDir"
+$silent = New-Item -ItemType Directory -Force -Path $toolsDir
+
+Write-Host
+
+foreach($file in $templateDirectory.EnumerateFiles())
 {
-    $content = Get-Content $file;
+    Write-Host "Processing $($file.FullName)"
+    $newFile = "$($toolsDir)\\$($file.Name)"
 
-    echo "Updating $file";
+    $content = Get-Content $file.FullName;
 
     $content = $content -replace $versionToken, $version
     ForEach($token in $tokens)
     {
         $content = $content -replace $token.Name, $token.Value;
     }
-    Set-Content $file.FullName -Encoding UTF8 $content
+
+    Write-Host "Writing $newFile";
+    Set-Content $newFile -Encoding UTF8 $content
+
+    Write-Host
 }
 
-echo "Prepackage complete"
+Write-Host "Prepackage complete"
