@@ -25,7 +25,7 @@ Write-Host "Starting prepackage of version $version";
 # Find Our Directories
 #######################################
 Write-Host
-$templateDirectory = Get-ChildItem -Recurse -Depth 10 -Directory -Include ToolsTemplates
+$templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates
 
 $toolsDir = "$($templateDirectory.Parent.FullName)\Tools"
 write-host "Creating $toolsDir"
@@ -50,7 +50,7 @@ foreach($token in $tokens)
 
 #######################################
 # Convert tokenized files
-#######################################$con
+#######################################
 Write-Host
 foreach($file in $templateDirectory.EnumerateFiles().Where({$PSItem.Name -ne "tokens.json";}))
 {
