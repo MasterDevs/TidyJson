@@ -28,7 +28,9 @@ Write-Host
 $templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates
 
 $toolsDir = "$($templateDirectory.Parent.FullName)\Tools"
-write-host "Creating $toolsDir"
+Write-Host "xxxxxxxxxxxxxxxxxxxxxxx"
+write-host "Creating <$toolsDir>"
+Write-Host "YYYYYYYYYYYYYYYYYYYYYYY"
 $silent = New-Item -ItemType Directory -Force -Path $toolsDir
 
 #######################################
