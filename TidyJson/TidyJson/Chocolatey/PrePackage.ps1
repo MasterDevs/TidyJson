@@ -27,10 +27,19 @@ Write-Host "Starting prepackage of version $version";
 Write-Host
 $templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates
 
+Write-Host "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+Write-Host "Template Dir:  $templateDirectory"
+Write-Host "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+
+
+
 $toolsDir = "$($templateDirectory.Parent.FullName)\Tools"
 Write-Host "xxxxxxxxxxxxxxxxxxxxxxx"
 write-host "Creating <$toolsDir>"
 Write-Host "YYYYYYYYYYYYYYYYYYYYYYY"
+
+
+
 $silent = New-Item -ItemType Directory -Force -Path $toolsDir
 
 #######################################
