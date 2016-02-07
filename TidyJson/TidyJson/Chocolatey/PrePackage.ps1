@@ -1,16 +1,16 @@
 ﻿################################################################################
 # Prepackage.ps1
 #
-# This script generates the chocolatey install and uninstall powershell scripts 
-# found in the Tools directory in the chocolatey package.  
+# This script generates the chocolatey install and uninstall powershell scripts
+# found in the Tools directory in the chocolatey package.
 #
-# It reads template files fond in the ToolsTemplates directory and replaces 
-# tokens with run time values.  Tokens are typically strings with leading and 
+# It reads template files fond in the ToolsTemplates directory and replaces
+# tokens with run time values.  Tokens are typically strings with leading and
 # trailing underscores, e.g. __PACKAGE_NAME__.
 #
 # Tokens are defined in the Tokens.Json file in the ToolsTemplates directory.
 # __VERSION__ is a special token, it is hardcoded to be replaced with the
-# environtment variable APPVEYOR_REPO_TAG_NAME.  This allows AppVeyor to 
+# environtment variable APPVEYOR_REPO_TAG_NAME.  This allows AppVeyor to
 # update version information in the scripts
 #
 # For more information see:
@@ -46,7 +46,6 @@ foreach($token in $tokens)
 {
     Write-Host "    $($token.Name) ==> $($token.Value)"
 }
-
 
 #######################################
 # Convert tokenized files

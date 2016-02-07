@@ -1,4 +1,4 @@
-﻿$packageName = '__PACKAGE_NAME__' # arbitrary name for the package, used in messages
+﻿$packageName = '__PACKAGE_NAME__' # name for the package, used in messages
 $url ="__PROJECT_BASE_URL__/releases/download/__VERSION__/bin.zip"
 
 $installDir = Join-Path $env:AllUsersProfile "$packageName"
