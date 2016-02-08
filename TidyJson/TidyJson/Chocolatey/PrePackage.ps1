@@ -25,7 +25,7 @@ Write-Host "Starting prepackage of version $version";
 # Find Our Directories
 #######################################
 Write-Host
-$templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates
+$templateDirectory = Get-ChildItem -Recurse -Directory -Include ToolsTemplates TidyJson\TidyJson\Chocolatey
 
 Write-Host "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 Write-Host "Template Dir:  $templateDirectory"
