@@ -1,1 +1,1 @@
-cinst TidyJson.portable -yf -s %CD%
+﻿cinst TidyJson.portable -yf -s %CD%

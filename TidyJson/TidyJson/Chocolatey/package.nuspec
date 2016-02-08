@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+﻿<?xml version="1.0"?>
+<package >
   <metadata>
     <id>TidyJson.portable</id>
     <title>TidyJson (Portable)</title>
+    <!-- Version is overwritten when the package is created -->
     <version>0.0.1</version>
     <authors>MasterDevs</authors>
     <owners>MasterDevs</owners>

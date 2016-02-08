@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 
 SET BuildVersion=0.0.1
 SET APPVEYOR_REPO_TAG_NAME=v%BuildVersion%

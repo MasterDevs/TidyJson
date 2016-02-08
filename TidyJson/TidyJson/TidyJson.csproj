@@ -41,8 +41,8 @@
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MasterDevs.ChocolateyCoolWhip, Version=0.0.9.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ChocolateyCoolWhip.0.0.9.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\MasterDevs.ChocolateyCoolWhip.dll</HintPath>
+    <Reference Include="MasterDevs.ChocolateyCoolWhip, Version=0.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChocolateyCoolWhip.0.0.11.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\MasterDevs.ChocolateyCoolWhip.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MasterDevs.Clippy, Version=0.0.6.0, Culture=neutral, processorArchitecture=MSIL">
