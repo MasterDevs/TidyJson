@@ -24,13 +24,13 @@ TidyJson can be installed with [Chocolatey](https://chocolatey.org/)
         tidyJson -c
             Read JSON from clipboard and write it back to the clipboard
 
-        tidyJson -f myOutput.json
+        tidyJson -o myOutput.json
             Read JSON from standard input and write it to the file myOutput.json
 
         tidyJson -i myInput.json
             Read JSON from the file myInput.Json and write it to standard output
 
-        tidyJson -i myInput.json -f myOutput.json
+        tidyJson -i myInput.json -o myOutput.json
             Read JSON from the file myInput.Json and write it to the file myOutput.json
 
 # Using from Vim
